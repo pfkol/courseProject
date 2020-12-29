@@ -1,8 +1,6 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
+import JSONTools
+import DBTools
+import json
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -12,7 +10,13 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('Piotrek - update on github')
-    print_hi('second line pronted')
+    print_hi('second line printed')
     print_hi('third line printed')
+    jsonObj = JSONTools.Json()
+    jsonObj.getJson()
+    data = jsonObj.getDataFromJson()
+    dataString = json.dumps(data)
+    productsList = json.loads(dataString, object_hook=JSONTools. productJsonDecod)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    db = DBTools.DB()
+    db.dbInsertProducts(productsList)
