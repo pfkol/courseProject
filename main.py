@@ -11,7 +11,7 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('Piotrek - update on github')
     print_hi('second line printed')
-    print_hi('third line printed')
+    print_hi('forth lone printed new commit to exist pull request')
     jsonObj = JSONTools.Json()
     jsonObj.getJson()
     data = jsonObj.getDataFromJson()
