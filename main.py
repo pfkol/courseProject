@@ -12,6 +12,7 @@ if __name__ == '__main__':
     print_hi('Piotrek - update on github')
     print_hi('second line printed')
     print_hi('forth lone printed new commit to exist pull request')
+    print_hi('fifth - to check if new commit will be pull from different branch than master')
     jsonObj = JSONTools.Json()
     jsonObj.getJson()
     data = jsonObj.getDataFromJson()
